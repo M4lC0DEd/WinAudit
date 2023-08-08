@@ -1,7 +1,7 @@
 from volatility3.framework import contexts
 from volatility3.plugins.windows.registry import registryapi
 import os
-from datetime import datetime  # Import datetime module
+from datetime import datetime
 
 def read_keys_from_file(file_path):
     with open(file_path, "r") as f:
@@ -28,7 +28,7 @@ def identify_permission_changed_keys(keys, registry):
         permissions_info = analyze_permissions(registry, key)
         # Placeholder logic: Determine if permissions_info indicates a permission change
         # Example: Check if there's a change from admin to SYSTEM or vice versa
-        if permissions_changed:  # Replace with your actual condition/logic
+        if permissions_info_changed(permissions_info):  # Replace with your actual condition/logic
             permission_changed_keys.append(key)
     return permission_changed_keys
 
@@ -69,4 +69,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
   
