@@ -3,7 +3,7 @@ from volatility3.plugins.windows.registry import registryapi
 
 def read_keys_from_file(file_path):
     with open(file_path, "r") as f:
-        lines = f.readlines()  in lines] 
+        lines = f.readlines()  in lines 
 
 def identify_modified_keys(admin_editable_keys, system_only_keys):
     modified_keys = []
